@@ -1,0 +1,10 @@
+salary = int(input("Enter your basic salary: "))
+DA = salary * 0.70
+print("Dearness Allowance: ",DA)
+
+
+TA = salary * 0.30
+print("Travel allowance: ",TA)
+
+HRA = salary * 0.1
+print("House rental Allowance: ",HRA)
