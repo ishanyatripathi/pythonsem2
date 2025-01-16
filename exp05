@@ -2,13 +2,20 @@ num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 
 add = num1 + num2
-print("Addition of the numbers are:" , add)
+print("Addition of the numbers is:", add)
 
-sub = num1 - num2
-print("Substraction of the numbers are:" , sub)
+sub = num2 - num1
+print("Subtraction of the numbers is:", sub)
 
-div = num1/num2
-print("Division of the numbers are:" , div)
+if num2 == 0:
+    print("Division Error")
+else:
+    div = num1 / num2
+    print("Division of the numbers is:", div)
+if num2 == 0:
+     print("Division error")
+else:
+    mod = num1 % num2
+    print("Modulus of the numbers is:", mod)
+    
 
-mod = num1%num2
-print("Modulus of the numbers are:" , mod)
