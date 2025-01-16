@@ -8,3 +8,6 @@ print("Travel allowance: ",TA)
 
 HRA = salary * 0.1
 print("House rental Allowance: ",HRA)
+
+gross_salary = DA+TA+HRA+salary
+print("Your Gross Salary is: ",gross_salary)
