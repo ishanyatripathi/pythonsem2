@@ -1,0 +1,23 @@
+def check_prime(number):
+    if number < 2:  # Handle numbers less than 2
+        print(f"{number} is not a prime number.")
+        return
+
+    count = 0
+    limit = number // 2 
+
+   
+    for i in range(2, limit + 1):
+        if number % i == 0:  # If number is divisible by i
+            count += 1  # Increment count because it's divisible by i
+            break  # No need to check further, we know the number is not prime.
+
+   
+    if count >= 1:
+        print(f"{number} is not a prime number.")
+    else:
+        print(f"{number} is a prime number.")
+
+
+check_prime(29)
+check_prime(8)
