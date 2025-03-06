@@ -1,0 +1,128 @@
+student = {
+    "101": {
+        "name": "Vishal",
+        "age": 23,
+        "city": "Nerul",
+        "grade": "A",
+        "attendance": 75
+    },
+    "102": {
+        "name": "Rohan",
+        "age": 22,
+        "city": "Vashi",
+        "grade": "B",
+        "attendance": 55
+    },
+    "103": {
+        "name": "Neha",
+        "age": 23,
+        "city": "Nerul",
+        "grade": "A",
+        "attendance": 65
+    },
+}
+
+def create():
+    roll = input("Enter Roll: ")
+    name = input("Enter Name: ")
+    age = int(input("Enter Age: "))
+    city = input("Enter City: ")
+    grade = input("Enter Grade: ")
+    attendance = int(input("Enter Attendance: "))
+
+    student[roll] = {
+        "name": name,
+        "age": age,
+        "city": city,
+        "grade": grade,
+        "attendance": attendance
+    }
+    print("Record Added in Student Dictionary..!!")
+
+def update_name():
+    roll = input("Enter Roll for updating student name: ")
+    if roll in student:
+        name = input("Enter updated Name: ")
+        student[roll]["name"] = name
+        print("Name is updated..!!")
+    else:
+        print("Roll number not found!")
+
+def update_age():
+    roll = input("Enter Roll for updating student age: ")
+    if roll in student:
+        age = int(input("Enter updated Age: "))
+        student[roll]["age"] = age
+        print("Age is updated..!!")
+    else:
+        print("Roll number not found!")
+
+def update_city():
+    roll = input("Enter Roll for updating student city: ")
+    if roll in student:
+        city = input("Enter updated City: ")
+        student[roll]["city"] = city
+        print("City is updated..!!")
+    else:
+        print("Roll number not found!")
+
+def update_grade():
+    roll = input("Enter Roll for updating student grade: ")
+    if roll in student:
+        grade = input("Enter updated Grade: ")
+        student[roll]["grade"] = grade
+        print("Grade is updated..!!")
+    else:
+        print("Roll number not found!")
+
+def update_attendance():
+    roll = input("Enter Roll for updating student attendance: ")
+    if roll in student:
+        attendance = int(input("Enter updated Attendance: "))
+        student[roll]["attendance"] = attendance
+        print("Attendance is updated..!!")
+    else:
+        print("Roll number not found!")
+
+def display():
+    if not student:
+        print("No student records available!")
+        return
+    for roll, details in student.items():
+        print(f"Roll: {roll}")
+        for key, value in details.items():
+            print(f"{key}: {value}")
+        print()
+
+def avg():
+    if not student:
+        print("No student records available!")
+        return
+    total = sum(student[x]["attendance"] for x in student)
+    average = total / len(student)
+    print(f"Average attendance of class: {average:.2f}%")
+
+while True:
+    print("\n1. Create Student Record\n2. Update Name\n3. Update City\n4. Update Age")
+    print("5. Update Attendance\n6. Display Students\n7. Find Avg Attendance\n8. Exit")
+    n = int(input("Enter choice: "))
+
+    if n == 1:
+        create()
+    elif n == 2:
+        update_name()
+    elif n == 3:
+        update_city()
+    elif n == 4:
+        update_age()
+    elif n == 5:
+        update_attendance()
+    elif n == 6:
+        display()
+    elif n == 7:
+        avg()
+    elif n == 8:
+        print("Thank you .... Visit Again ..!!!")
+        break
+    else:
+        print("Enter a valid choice (1-8)!")
