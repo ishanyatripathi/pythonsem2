@@ -1,6 +1,0 @@
-principle = int(input("Enter your principle amount: "))
-interest = int(input("Enter the rate of interest: "))
-time = int(input("Enter time period in years: "))
-
-simple_interest = ((principle*interest*time)/100)
-print("The Interest is: " , simple_interest)
