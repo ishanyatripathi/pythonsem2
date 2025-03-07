@@ -2,5 +2,5 @@ salary = int(input("Enter your basic salary: "))
 DA = salary * 0.70
 TA = salary * 0.30
 HRA = salary * 0.1
-gross_salary = DA+TA+HRA
+gross_salary = DA+TA+HRA+salary
 print("Your Gross Salary is: ",gross_salary)
